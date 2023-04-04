@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  height: 4rem;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.navbar__categories{
+  color: white;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar__categories>h5{
+  font-size: 1.3rem;
+  font-weight: 100;
+  letter-spacing: 0.06em;
+}
+
+.navbar__black {
+  background-color: #111;
+}
+
+.navbar__netflix-logo {
+  width: 8rem;
+  height: 2rem;
+  object-fit: contain;
+  background: transparent;
+}
+
+.navbar__account-logo {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  transition: transform 350ms;
+}
+
+.navbar__account-logo:hover {
+  cursor: pointer;
+  transform: scale(1.12);
+}
