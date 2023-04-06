@@ -2,10 +2,16 @@ import React, { useState, useEffect } from 'react';
 import "./navbar.css";
 import logo from "./assets/netflix-logo.png";
 import avatar from "./assets/Netflix-avatar.png";
+import {signOut} from "firebase/auth";
+import { auth } from "./firebase";
 
 const Navbar = () => {
 
   const [handleShow, setHandleShow] = useState(false);
+
+  const logOut = async () => {
+    await signOut(auth);
+  }
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -15,9 +21,9 @@ const Navbar = () => {
         setHandleShow(false);
       }
     })
-    
-    return ()=>{window.removeEventListener("scroll", null);}
-    
+
+    return () => { window.removeEventListener("scroll", null); }
+
   })
 
   return (
@@ -29,7 +35,7 @@ const Navbar = () => {
           <h5>Horror</h5>
         </div>
       )} */}
-      <img className='navbar__account-logo' src={avatar} alt="account-logo" />
+      <img className='navbar__account-logo' onClick={logOut} src={avatar} alt="account-logo" />
     </nav>
   );
 }

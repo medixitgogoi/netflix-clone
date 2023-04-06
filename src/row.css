@@ -5,7 +5,7 @@
 .row__posters {
   display: flex;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 1.1rem;
   width: 100vw;
   overflow-x: auto;
   overflow-y: hidden;
