@@ -1,60 +1,111 @@
-.signUp{
-    margin: 0 auto;
-    max-width: 450px;
-    padding: 50px;
-    background: rgba(0, 0, 0, 0.85);
-    border-radius: 1rem;
+.signUp {
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 1rem;
 }
 
 .signUp > form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.signUp > form >input{
-    outline-width: 0;
-    height: 40px;
-    font-size: 13px;
-    margin-bottom: 14px;
-    border-radius: 5px;
-    border: none;
-    padding: 5px 15px;
-
+.signUp > form > input {
+  outline-width: 0;
+  height: 30px;
+  font-size: 11px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 15px;
 }
 
-.signUp>form>h1{
-    text-align: left;
-    margin-bottom: 1.5rem;
+.signUp > form > h1 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
 }
 
-.signUp>form>button{
-    height: 50px;
-    border-radius: 5px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    color: #fff;
-    font-size: 1rem;
-    background-color: #e50914;
+.signUp > form > button {
+  height: 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: #e50914;
 }
 
-.signUp>form>h4{
-    text-align: left;
-    margin-top: 30px;
+.signUp > form > h4 {
+  text-align: left;
+  margin-top: 30px;
 }
 
-.signUp__gray{
-    color: gray;
-    margin-right: 5px;
-    font-weight: 700;
+.signUp__gray {
+  color: gray;
+  margin-right: 5px;
+  font-weight: 700;
+  font-size: 15px;
 }
 
-.signUp__link{
-    font-weight: 400;
+.signUp__link {
+  font-weight: 400;
+  font-size: 16px;
 }
 
-.signUp__link:hover{
-    cursor: pointer;
-    text-decoration: underline;
+.signUp__link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 450px) {
+    .signUp{
+        padding: 28px;
+    }
+    .signUp > form > h1{
+        font-size: 1rem;
+    }
+    .signUp__gray {
+        font-size: 0.9rem;
+    }
+    .signUp__link{
+        font-size: 1rem;
+    }
+    .signUp > form > button{
+        height: 40px;
+    }
+    .signUp > form > input{
+        font-size: 11px;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1020px){
+    .signUp{
+        max-width: 600px;
+        padding: 2rem;
+        height: 25rem;
+    }
+    .signUp > form > h1{
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
+    .signUp > form > input{
+        font-size: 1rem;
+        margin-bottom: 1.3rem;
+    }
+    .signUp > form > button{
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        height: 48px;
+    }
+    .signUp__gray {
+        font-size: 1.3rem;
+    }
+    .signUp__link{
+        font-size: 1.4rem;
+    }
 }

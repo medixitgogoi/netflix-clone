@@ -1,108 +1,162 @@
-.login{
-    position: relative;
-    height: 100%;
+.login {
+  position: relative;
+  height: 100%;
 }
 
-.login__background{
-    background: url("https://i.pinimg.com/originals/6b/e7/4c/6be74cf2eb1c6873c0183fcd8abf9d0f.jpg") center no-repeat;
-    background-size: cover;
-    height: 100vh;
+.login__background {
+  background: url("https://i.pinimg.com/originals/6b/e7/4c/6be74cf2eb1c6873c0183fcd8abf9d0f.jpg")
+    center no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-.login__gradient{
-    width: 100%;
-    z-index: 1;
-    height: 100vh;
-    background: rgba(0,0,0,0.4);
-    background-image: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.8) 0,
-        rgba(0, 0, 0, 0) 60%,
-        rgba(0, 0, 0, 0.8) 100%
-    );
+.login__gradient {
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }
 
-.login__netflix-logo{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    object-fit: contain;
-    width: 110px;
+.login__netflix-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  object-fit: contain;
+  width: 80px;
 }
 
-.login__button{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 0.2rem;
-    border: none;
-    color: #fff;
-    background-color: #e50914;
-    transition: all 0.4s;
+.login__button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 7px 17px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  border: none;
+  color: #fff;
+  background-color: #e50914;
+  transition: all 0.4s;
 }
 
-.login__button:hover{
-    cursor: pointer;
-    background-color: #fff;
-    color: #e50914;
+.login__button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #e50914;
 }
 
-.login__body{
-    position: absolute;
-    top: 30%;
-    z-index: 1;
-    padding: 20px;
-    color: #fff;
-    width: 100%;
-    font-size: larger;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+.login__body {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  padding: 20px;
+  color: #fff;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-.login__body>h1{
-    margin-bottom: 20px;
-    font-size: 3rem;
-    letter-spacing: 0.03em;
-    font-weight: 700;
-    /* text-align: center; */
+.login__body > h1 {
+  margin-bottom: 20px;
+  font-size: 2.3rem;
+  letter-spacing: 0.03em;
+  font-weight: 700;
 }
 
-.login__body>h2{
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    /* text-align: center; */
+.login__body > h2 {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
 }
 
-.login__body>h3{
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    /* text-align: center; */
+.login__body > h3 {
+  margin-bottom: 20px;
+  font-size:0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
 }
 
-.login__input>form>input{
-    padding: 25.5px 20px;
-    height: 30px;
-    width: 20%;
-    border: none;
-    max-width: 600px;
-    outline-width: 0;
+.login__input > form > input {
+  padding: 20px 15px;
+  height: 30px;
+  width: 20%;
+  border: none;
+  max-width: 600px;
+  outline-width: 0;
 }
 
-.login__input>form>button{
-    padding: 16px 20px;
+.login__input > form > button {
+  padding: 10.4px 20px;
+  font-size: 1rem;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 450px) {
+  .login__netflix-logo {
+    width: 90px;
+  }
+  .login__button {
+    padding: 5px 10px;
     font-size: 1rem;
-    background-color: #e50914;
-    color: #fff;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .login__body {
+    top: 25%;
+  }
+  .login__body > h1 {
+    font-size: 2.2rem;
+  }
+  .login__body > h2 {
+    font-size: 1.4rem;
+  }
+  .login__body > h3 {
+    font-size: 0.9rem;
+  }
+  form > input {
+    display: none;
+  }
+  .login__input > form > button {
+    border-radius: 0.2rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.7rem 20px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1020px) {
+  .login__body > h1 {
+    font-size: 3rem;
+  }
+  .login__body > h2 {
+    font-size: 2rem;
+  }
+  .login__body > h3 {
+    font-size: 1.3rem;
+  }
+  .login__input > form > input {
+    width: 55%;
+    font-size: 1.2rem;
+  }
+  .login__input {
+    margin-top: 2rem;
+  }
+  .login__input > form > button {
+    font-size: 1.2rem;
+  }
+  .login__button {
+    font-size: 1.2rem;
+  }
 }

@@ -2,16 +2,14 @@ import React, { useState, useEffect } from 'react';
 import "./navbar.css";
 import logo from "./assets/netflix-logo.png";
 import avatar from "./assets/Netflix-avatar.png";
-import {signOut} from "firebase/auth";
-import { auth } from "./firebase";
+import { useNavigate } from 'react-router-dom';
+import {BiSearch} from "react-icons/bi";
+import {IoMdNotifications} from "react-icons/io";
 
 const Navbar = () => {
 
   const [handleShow, setHandleShow] = useState(false);
-
-  const logOut = async () => {
-    await signOut(auth);
-  }
+  const navigateTo = useNavigate();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -28,14 +26,20 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${handleShow && "navbar__black"}`}>
-      <img className='navbar__netflix-logo' src={logo} alt="netflix-logo" />
-      {/* {handleShow && (
-        <div className="navbar__categories">
-          <h5>Mystery</h5>
-          <h5>Horror</h5>
-        </div>
-      )} */}
-      <img className='navbar__account-logo' onClick={logOut} src={avatar} alt="account-logo" />
+      <img className='navbar__netflix-logo' onClick={() => navigateTo('/')} src={logo} alt="netflix-logo" />
+      <div className="navbar__categories">
+        <h5>Mystery</h5>
+        <h5>Horror</h5>
+        <h5>Adventure</h5>
+        <h5>Romance</h5>
+        <h5>Action</h5>
+        <h5>Documentaries</h5>
+      </div>
+      <div className="navbar__icons">
+          <BiSearch size={27} />
+          <IoMdNotifications size={27} />
+      </div>
+        <img className='navbar__account-logo' onClick={() => navigateTo('/profile')} src={avatar} alt="account-logo" />
     </nav>
   );
 }

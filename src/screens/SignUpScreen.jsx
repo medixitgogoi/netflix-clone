@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import "./SignUpScreen.css";
 
@@ -8,11 +8,13 @@ const SignUpScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const register = async () => {
-    try{
+  const register = async (e) => {
+    e.preventDefault(); //to prevent the page from loading
+
+    try {
       const user = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(user);
-    }catch(error){
+      // console.log(user.user);
+    } catch (error) {
       alert(error.message);
     }
   }
@@ -20,10 +22,10 @@ const SignUpScreen = () => {
   const signIn = async (e) => {
     e.preventDefault();
 
-    try{
+    try {
       const user = await signInWithEmailAndPassword(auth, email, password);
-      console.log(user);
-    }catch(error){
+      // console.log(user);
+    } catch (error) {
       alert(error.message);
     }
   }
@@ -32,9 +34,9 @@ const SignUpScreen = () => {
     <div className='signUp'>
       <form>
         <h1>Sign In</h1>
-        <input type="email" placeholder='Email ...' onChange={(e)=>setEmail(e.target.value)} />
-        <input type="password" placeholder='Password ...' onChange={(e)=>setPassword(e.target.value)} />
-        <button type="submit" onClick={signIn}>Sign In</button>
+        <input type="email" placeholder='Email ...' onChange={(e) => setEmail(e.target.value)} />
+        <input type="password" placeholder='Password ...' onChange={(e) => setPassword(e.target.value)} />
+        <button type="submit" onClick={signIn}>Sign in</button>
         <h4>
           <span className='signUp__gray'>New to Netflix?</span>
           <span className='signUp__link' onClick={register}>Sign up now.</span>

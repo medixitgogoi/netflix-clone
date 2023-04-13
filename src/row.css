@@ -1,32 +1,26 @@
-.row:first-child {
-  margin-top: 2rem;
+.row {
+  padding-top: 2rem;
 }
 
 .row__posters {
   display: flex;
   justify-content: flex-start;
-  gap: 1.1rem;
+  gap: 0.8rem;
   width: 100vw;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 2rem;
+  padding: 2rem 1.7rem 0 2rem;
 }
 
 .row__posterLarge {
-  max-height: 37vh;
+  max-height: 35vh;
   object-fit: contain;
   border-radius: 0.5rem;
   transition: transform 300ms;
 }
 
-/* .row__posterLarge:hover {
-  cursor: pointer;
-  transform: scale(1.09);
-} */
-
 .row__poster {
-  width: 15vw;
-  /* height: 16vh; */
+  width: 14vw;
   object-fit: contain;
   border-radius: 0.3rem;
   transition: transform 300ms;
@@ -40,7 +34,33 @@
 
 .row__title {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 0.05em;
   padding: 0 0 0 2rem;
+}
+
+@media screen and (max-width: 450px) {
+  .row__title {
+    font-size: 1.3rem;
+    padding-left: 1.2rem;
+  }
+  .row__posters {
+    gap: 0.6rem;
+    padding: 1.2rem 2rem 0 1.2rem;
+  }
+  .row__poster{
+    width: 42vw;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1020px) {
+  /* .row {
+    padding-top: 6rem;
+  } */
+  .row__poster{
+    width: 35vw;
+  }
+  .row__title{
+    font-size: 2.3rem ;
+  }
 }
